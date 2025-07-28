@@ -95,4 +95,4 @@ vim /home/usuario/vimclass/nav.txt
 
 ---
 
-Feito com 💻 por Zezinho para estudos e revisão de comandos do Vim.
+
