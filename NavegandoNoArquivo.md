@@ -1,79 +1,98 @@
-+-------------------------------------------------------------+
-|                                                             |
-|          ✨  SEUS PRIMEIROS PASSOS NO VIM!  ✨              |
-|                                                             |
-+-------------------------------------------------------------+
+# 🧠 Guia de Navegação no Vim para Iniciantes
 
-             Modo Padrão: 💡 NORMAL MODE 💡
-             (Onde você digita os comandos)
+Este guia foi criado como resumo do curso de Vim da Udemy, com foco em estudantes iniciantes. Ele apresenta os principais comandos de **navegação no modo normal** do Vim, com explicações simples e exemplos.
 
----------------------------------------------------------------
+---
 
-🎯  MOVIMENTAÇÃO BÁSICA (Por caractere/linha)
-    Não tire as mãos da posição de digitação!
+## 📂 Abrindo um Arquivo no Vim
 
-    ⬅️   **h** - Esquerda
-    ⬇️   **j** - Baixo
-    ⬆️   **k** - Cima
-    ➡️   **l** - Direita
+Para abrir um arquivo existente:
 
-    *Dica: Segure a tecla para repetir o movimento!*
+```bash
+vim nome-do-arquivo.txt
+```
 
----------------------------------------------------------------
+Exemplo usando caminho relativo:
+```bash
+cd vimclass
+vim nav.txt
+```
 
-📄  MOVIMENTAÇÃO POR PÁGINAS
+Exemplo usando caminho absoluto:
+```bash
+vim /home/usuario/vimclass/nav.txt
+```
 
-    ⬇️ PÁGINA:  **Ctrl + f** (de "Forward" - para frente)
-    ⬆️ PÁGINA:  **Ctrl + b** (de "Backward" - para trás)
+---
 
----------------------------------------------------------------
+## 🧭 Navegação Básica (Modo Normal)
 
-📖  MOVIMENTAÇÃO POR PALAVRAS (e seus segredos!)
+| Tecla | Ação               | Dica                        |
+|-------|--------------------|-----------------------------|
+| `h`   | Esquerda           | Fica à esquerda no teclado |
+| `j`   | Para baixo         | Parece uma seta para baixo |
+| `k`   | Para cima          | Acima do `j`               |
+| `l`   | Para a direita     | Fica à direita no teclado  |
 
-    ➡️ PRÓXIMA PALAVRA:
-        ▪️ **w** (minúsculo): Para em PONTUAÇÃO.
-                               (Ex: `palavra,` -> para em `,` depois `palavra`)
-        ▪️ **W** (MAIÚSCULO): IGNORA PONTUAÇÃO.
-                               (Ex: `palavra,` -> pula direto para a próxima palavra)
+---
 
-    ⬅️ PALAVRA ANTERIOR:
-        ▪️ **b** (minúsculo): Volta parando em PONTUAÇÃO.
-        ▪️ **B** (MAIÚSCULO): Volta IGNORANDO PONTUAÇÃO.
+## 📄 Navegação por Página
 
-    *Padrão Vim: Minúscula e Maiúscula fazem coisas PARECIDAS!*
+| Atalho     | Ação               |
+|------------|--------------------|
+| `Ctrl+f`   | Avança uma página  |
+| `Ctrl+b`   | Volta uma página   |
 
----------------------------------------------------------------
+---
 
-📏  MOVIMENTAÇÃO NA LINHA (Início e Fim)
+## 🔤 Navegação por Palavras
 
-    ↩️ INÍCIO DA LINHA (primeiro caractere):  **0** (zero)
-    ↩️ INÍCIO REAL (primeiro texto, ignora espaços):  **^**
-    ➡️ FIM DA LINHA:  **$**
+| Comando    | Ação                                              |
+|------------|---------------------------------------------------|
+| `w` / `W`  | Avança para próxima palavra (W ignora pontuação)  |
+| `b` / `B`  | Volta uma palavra (B ignora pontuação)            |
 
----------------------------------------------------------------
+---
 
-🔢  SALTANDO PARA LINHAS ESPECÍFICAS
+## 📌 Navegação por Linhas
 
-    PRIMEIRA LINHA DO ARQUIVO:  **gg**
-    ÚLTIMA LINHA DO ARQUIVO:  **G** (maiúsculo)
+| Comando | Ação                                      |
+|---------|-------------------------------------------|
+| `0`     | Vai para o início da linha (coluna 0)     |
+| `^`     | Vai para o primeiro caractere da linha    |
+| `$`     | Vai para o final da linha                 |
 
-    LINHA ESPECÍFICA:
-    ▪️ Digite o NÚMERO e depois **gg** ou **G**.
-      Ex: `2gg` ou `2G` (para a linha 2)
+---
 
-    USANDO O MODO DE LINHA (começa com `:`):
-    ▪️ Para uma linha específica:  **:[número]** + Enter
-      Ex: `:5` + Enter (para a linha 5)
-    ▪️ Para a última linha:  **:$** + Enter
+## 🔢 Ir para uma Linha Específica
 
----------------------------------------------------------------
+| Comando    | Ação                                |
+|------------|-------------------------------------|
+| `gg`       | Vai para a primeira linha           |
+| `G`        | Vai para a última linha             |
+| `nG` / `ngg` | Vai para a linha `n`              |
+| `:n`       | Vai para a linha `n` (modo comando) |
+| `:$`       | Vai para a última linha             |
 
-📊  INFORMAÇÕES DO ARQUIVO E CURSOR
+---
 
-    VER STATUS:  **Ctrl + g**
-      (Mostra nome do arquivo, linha atual, total de linhas, %)
+## ℹ️ Ver Informações do Arquivo
 
-    LIGAR/DESLIGAR A "RÉGUA" (linha e coluna no canto):
-    ▪️ Ligar:  **:set ruler**
-    ▪️ Desligar: **:set noruler**
-    ▪️ Alternar: **:set ruler!**
+| Comando       | Ação                                                    |
+|---------------|---------------------------------------------------------|
+| `Ctrl+g`      | Mostra nome do arquivo, linha atual e porcentagem       |
+| `g Ctrl+g`    | Mostra número de palavras, caracteres, etc.             |
+
+---
+
+## 📏 Ativando a Régua
+
+| Comando           | Ação                                     |
+|-------------------|------------------------------------------|
+| `:set ruler`      | Ativa a régua (exibe linha e coluna)     |
+| `:set noruler`    | Desativa a régua                         |
+| `:set ruler!`     | Alterna entre ligado/desligado           |
+
+---
+
+Feito com 💻 por Zezinho para estudos e revisão de comandos do Vim.
